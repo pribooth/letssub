@@ -1,0 +1,32 @@
+<h1>
+  Edit listing #<%= @listing.id %>
+</h1>
+
+<hr>
+
+<!-- Form listing start -->
+<form action="/update_listing/<%= @listing.id %>" method="post">
+<!-- Form listing end -->
+
+  <!-- Label and input for lister start -->
+  <div class="form-group">
+    <label for="lister">
+      Lister
+    </label>
+
+    <!-- Input for lister start -->
+    <input type="text" id="lister" name="lister" class="form-control" value="<%= @listing.lister %>">
+    <!-- Input for lister end -->
+  </div>
+  <!-- Label and input for lister end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update listing
+  </button>
+</form>
+
+<hr>
+
+<a href="/listings">
+  Go back
+</a>

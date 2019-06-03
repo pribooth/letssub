@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Listing resource:
+
+  # CREATE
+  get("/listings/new", { :controller => "listings", :action => "new_form" })
+  post("/create_listing", { :controller => "listings", :action => "create_row" })
+
+  # READ
+  get("/listings", { :controller => "listings", :action => "index" })
+  get("/listings/:id_to_display", { :controller => "listings", :action => "show" })
+
+  # UPDATE
+  get("/listings/:prefill_with_id/edit", { :controller => "listings", :action => "edit_form" })
+  post("/update_listing/:id_to_modify", { :controller => "listings", :action => "update_row" })
+
+  # DELETE
+  get("/delete_listing/:id_to_remove", { :controller => "listings", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Search resource:
 
   # CREATE
