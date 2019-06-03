@@ -11,80 +11,62 @@
         </a>
       </div>
 
-      <!-- Edit link search start -->
       <div class="col">
         <a href="/searches/<%= @search.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit search
         </a>
       </div>
-      <!-- Edit link search end -->
 
-      <!-- Delete link search start -->
       <div class="col">
         <a href="/delete_search/<%= @search.id %>" class="btn btn-block btn-outline-secondary">
           Delete search
         </a>
       </div>
-      <!-- Delete link search end -->
     </div>
 
     <dl>
       <dt>
         User
       </dt>
-      <!-- Display user_id start -->
       <dd>
         <%= @search.user_id %>
       </dd>
-      <!-- Display user_id end -->
 
       <dt>
         City
       </dt>
-      <!-- Display city start -->
       <dd>
         <%= @search.city %>
       </dd>
-      <!-- Display city end -->
 
       <dt>
         Start date
       </dt>
-      <!-- Display start_date start -->
       <dd>
         <%= @search.start_date %>
       </dd>
-      <!-- Display start_date end -->
 
       <dt>
         End date
       </dt>
-      <!-- Display end_date start -->
       <dd>
         <%= @search.end_date %>
       </dd>
-      <!-- Display end_date end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@search.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@search.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->

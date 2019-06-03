@@ -1,4 +1,3 @@
-<!-- Validation failure messages -->
 <% if @listing.present? %>
   <% if @listing.errors.any? %>
     <% @listing.errors.full_messages.each do |message| %>
@@ -16,21 +15,15 @@
 
 <hr>
 
-<!-- Form listing start -->
 <form action="/create_listing" method="post">
-<!-- Form listing end -->
 
-  <!-- Label and input for lister start -->
   <div class="form-group">
     <label for="lister">
       Lister
     </label>
 
-    <!-- Input for lister start -->
     <input type="text" id="lister" name="lister" class="form-control" value="<%= @listing.lister %>">
-    <!-- Input for lister end -->
   </div>
-  <!-- Label and input for lister end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create listing
