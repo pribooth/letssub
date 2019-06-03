@@ -1,6 +1,7 @@
 class ListingsController < ApplicationController
   def index
-    @listings = Listing.page(params[:page]).per(10)
+    @q = Listing.ransack(params[:q])
+    @listings = @q.result(:distinct => true).page(params[:page]).per(10)
 
     render("listing_templates/index.html.erb")
   end
